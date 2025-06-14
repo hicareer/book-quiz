@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       font-family: 'SejongGeulggot', sans-serif;
-      background-image: url('bg.jpg'); /* 배경 이미지 파일 이름 */
+      background-image: url('바다');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -43,21 +43,29 @@
     }
 
     .question {
-      margin: 20px 0;
-      padding: 12px;
+      margin: 25px 0;
+      padding: 16px;
       border-radius: 12px;
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .question p {
+    .question-number {
       font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .question p {
+      font-size: 1.3em;
+      margin: 0;
     }
 
     button {
       padding: 10px 20px;
-      margin: 5px;
-      font-size: 1em;
+      margin: 8px 5px 0 5px;
+      font-size: 1.1em;
       border: none;
       border-radius: 8px;
       background-color: #ffe066;
@@ -95,26 +103,31 @@
     <div class="subtitle">5개의 질문에 답해보세요!<br>우리 아이에게 꼭 맞는 책놀이 수업 유형을 알려드려요 🎈</div>
 
     <div class="question" id="q1">
+      <div class="question-number">Q1</div>
       <p>💖 우리 아이가 흥미를 느끼고, 즐겁게 참여할 수 있는 수업을 찾고 있어요.</p>
       <button onclick="answer(1, true)">O</button>
       <button onclick="answer(1, false)">X</button>
     </div>
     <div class="question" id="q2" style="display:none">
+      <div class="question-number">Q2</div>
       <p>📚 다양한 주제와 책을 접하는 기회가 있었으면 좋겠어요.</p>
       <button onclick="answer(2, true)">O</button>
       <button onclick="answer(2, false)">X</button>
     </div>
     <div class="question" id="q3" style="display:none">
+      <div class="question-number">Q3</div>
       <p>🎨 책을 읽고 난 후 다양한 독후 활동을 하고 싶어요.</p>
       <button onclick="answer(3, true)">O</button>
       <button onclick="answer(3, false)">X</button>
     </div>
     <div class="question" id="q4" style="display:none">
+      <div class="question-number">Q4</div>
       <p>🎤 우리 아이는 생각을 말로 표현하는 게 익숙하지 않아요.</p>
       <button onclick="answer(4, true)">O</button>
       <button onclick="answer(4, false)">X</button>
     </div>
     <div class="question" id="q5" style="display:none">
+      <div class="question-number">Q5</div>
       <p>🧸 책은 좋아하지만, 친구들과 함께하는 건 어려워해요.</p>
       <button onclick="answer(5, true)">O</button>
       <button onclick="answer(5, false)">X</button>
