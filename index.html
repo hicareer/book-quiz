@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>두근두근 책놀이, 우리 아이와 잘 맞을까? 😊</title>
+  <title>두근두근 책놀이, 우리 아이와 잘 맞을까? 🤔</title>
   <style>
     @font-face {
       font-family: 'SejongGeulggot';
@@ -12,7 +12,8 @@
 
     body {
       font-family: 'SejongGeulggot', sans-serif;
-      background-color: #fffaf3;
+      background: url('https://source.unsplash.com/featured/800x600/?books,kids') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       margin: 0;
       padding: 0;
@@ -20,20 +21,24 @@
 
     .container {
       max-width: 480px;
-      margin: 0 auto;
+      margin: 60px auto;
       padding: 20px;
+      background-color: rgba(255, 250, 243, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       text-align: center;
       font-size: 1.8em;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      line-height: 1.4em;
     }
 
     .subtitle {
       text-align: center;
       font-size: 1em;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #555;
     }
 
@@ -61,17 +66,24 @@
 
     .result {
       display: none;
-      margin-top: 30px;
-      padding: 20px;
+      margin-top: 40px;
+      padding: 25px;
       border-radius: 12px;
       background-color: #f0f8ff;
-      font-size: 1.1em;
+      font-size: 1.15em;
+      line-height: 1.8em;
+    }
+
+    .result strong {
+      font-size: 1.3em;
+      display: block;
+      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>📚 두근두근 책놀이, 우리 아이와 잘 맞을까? 😊</h1>
+    <h1>두근두근 책놀이,<br />우리 아이와 잘 맞을까? 🤔</h1>
     <div class="subtitle">
       5개의 질문에 답해보세요!<br />
       우리 아이에게 꼭 맞는 책놀이 수업 유형을 알려드려요 🎈
@@ -123,22 +135,21 @@
       result.style.display = 'block';
       let output = '';
       if (score <= 1) {
-        output = `🌱 <strong>살금살금 도전형 (O 0~1개)</strong><br>
+        output = `<strong>🌱 살금살금 도전형</strong>
         아이에게 독서 수업이 아직은 낯설고 조심스러울 수 있어요.<br>
-        ‘두근두근 책놀이’는 억지로 책을 읽게 하기보다,<br>
+        ‘두근두근 책놀이’는 억지로 책을 읽게 하기보다,
         아이 스스로 흥미를 느끼고 책과 가까워질 수 있도록 부드럽게 이끌어주는 수업이에요.<br>
         처음이라도 괜찮아요. 우리 아이만의 속도로 시작해 보세요.`;
       } else if (score <= 3) {
-        output = `🌿 <strong>말랑말랑 탐색형 (O 2~3개)</strong><br>
+        output = `<strong>🌿 말랑말랑 탐색형</strong>
         아이가 책이나 표현 활동에 조금은 망설이거나, 아직 익숙하지 않을 수 있어요.<br>
-        ‘두근두근 책놀이’는 다양한 책과 활동을 통해<br>
+        ‘두근두근 책놀이’는 다양한 책과 활동을 통해
         자연스럽게 말하고 표현하는 힘을 길러갈 수 있도록 도와줘요.<br>
         아이의 감정과 생각이 부드럽게 흘러나올 수 있는 시간, 지금 함께 시작해 보세요.`;
       } else {
-        output = `🌴 <strong>반짝반짝 공감형 (O 4~5개)</strong><br>
+        output = `<strong>🌴 반짝반짝 공감형</strong>
         우리 아이는 책을 함께 읽고, 나누고, 표현하는 즐거움을 느낄 준비가 되어 있어요.<br>
-        ‘두근두근 책놀이’는 친구들과의 소통, 다양한 책 주제, 창의적인 활동을 통해<br>
-        아이의 감정과 생각이 반짝이는 순간을 만들어줄 거예요.<br>
+        ‘두근두근 책놀이’는 친구들과의 소통, 다양한 책 주제, 창의적인 활동을 통해 아이의 감정과 생각이 반짝이는 순간을 만들어줄 거예요.<br>
         지금, 함께 자라는 책놀이 시간을 경험해 보세요.`;
       }
       result.innerHTML = output;
